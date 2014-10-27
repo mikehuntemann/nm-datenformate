@@ -1,11 +1,13 @@
 int stepSize = 5;
-float pointSize = 2.5;
+float pointSize = 5;
 
 int x;
 int y;
 
 void setup() {
   size(300, 600);
+  colorMode(HSB);
+  background(0);
 
   x = round(random(width));
   y = round(random(height));
@@ -13,10 +15,15 @@ void setup() {
 
 void draw() {
   strokeWeight(random(pointSize / 4, pointSize));
+  stroke(frameCount % 255, 255, 255, randomColor());
   point(x, y);
   
   x = updatePoint(x, width);
   y = updatePoint(y, height);
+}
+
+int randomColor() {
+  return round(random(255));
 }
 
 /*
