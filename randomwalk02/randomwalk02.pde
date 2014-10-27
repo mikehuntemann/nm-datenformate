@@ -22,6 +22,10 @@ void draw() {
   y = updatePoint(y, height);
 }
 
+void keyReleased() {
+  saveFrame("export/bildname" + hour() + minute() + second() + "-#######.png");
+}
+
 int randomColor() {
   return round(random(255));
 }
