@@ -1,4 +1,4 @@
-class Walker {
+class Walker2 {
   int stepSize = 5;
   float pointSize = 2;
 
@@ -16,7 +16,7 @@ class Walker {
   int gradeB;
   int gradeA;
 
-  Walker () {
+  Walker2 () {
     //Zufällige Startpunkte
     this.a = round(random(width));
     this.b = round(random(height));
@@ -34,7 +34,7 @@ class Walker {
     //stroke(frameCount % 255, 255, 255);
     noStroke();
     //fill(255, gradeG, gradeB);
-    fill(0, random(150, 255), 255);
+    fill(255, random(150, 255), 0);
     //strokeWeight(random(pointSize / 4, this.pointSize));
     //pushMatrix();
     //translate(x, y);
