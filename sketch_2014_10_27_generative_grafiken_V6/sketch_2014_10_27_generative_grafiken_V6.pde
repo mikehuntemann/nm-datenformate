@@ -1,6 +1,6 @@
 Walker walker;
 
-int walkersAmount = 10;
+int walkersAmount = 1;
 ArrayList<Walker> walkers = new ArrayList();
 
 

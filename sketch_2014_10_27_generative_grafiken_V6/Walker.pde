@@ -6,7 +6,8 @@ class Walker {
   int y;
   int a;
   int b;
-
+  int sizeTriangle;
+  int baseSize = 15;
   float deg = 0;
 
   Walker () {
@@ -21,23 +22,34 @@ class Walker {
   void draw () {
     deg = frameCount % 360;
     //stroke(frameCount % 255, 255, 255);
-    stroke(0, random(150, 255), 255);
-    strokeWeight(random(pointSize / 4, this.pointSize));
-    pushMatrix();
-    translate(x, y);
-    rotate(radians(deg));
-    line(0, 0, random(5, 20), random(5, 20));
-    popMatrix();
-    stroke(255, 125, 125);
-    line(this.a, this.b, this.a+20, this.b-20);
+    noStroke();
+    fill(0, random(150, 255), 255);
+    //strokeWeight(random(pointSize / 4, this.pointSize));
+    //pushMatrix();
+    //translate(x, y);
+    //rotate(radians(deg));
+    triangle(this.x-baseSize-sizeTriangle, this.y, this.x, this.y-baseSize*2-sizeTriangle, x+baseSize+sizeTriangle, y);
+    //popMatrix();
+
 
 
     this.a = this.updatePoint(this.a, width);
     this.b = this.updatePoint(this.b, height);
-    this.x = this.updatePoint(this.x, width-50);
-    this.y = this.updatePoint(this.y, height-50);
+    this.x = this.updatePoint(this.x, width);
+    this.y = this.updatePoint(this.y, height);
   }
 
+  int updateTriangle(int sizeTriangle) {
+
+
+    if (sizeTriangle <= 10) {
+      sizeTriangle++;
+    } else {
+      sizeTriangle = 0;
+    }
+
+    return sizeTriangle;
+  }
   int updatePoint(int position, int maximum) {
 
     int offset;
