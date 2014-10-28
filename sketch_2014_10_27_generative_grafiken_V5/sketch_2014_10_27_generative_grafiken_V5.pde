@@ -1,4 +1,6 @@
 Walker walker;
+
+int walkersAmount = 10;
 ArrayList<Walker> walkers = new ArrayList();
 
 
@@ -7,16 +9,9 @@ void setup() {
   background(0);
 
   //walker = new Walker();
-
+  for (int i = 0; i < walkersAmount; i++) {
   walkers.add(new Walker());
-  walkers.add(new Walker());
-  walkers.add(new Walker());
-  walkers.add(new Walker());
-  walkers.add(new Walker());
-  walkers.add(new Walker());
-  walkers.add(new Walker());
-  walkers.add(new Walker());
-  
+  }
 }
 
 void draw() {
@@ -32,6 +27,6 @@ void draw() {
 }
 
 void keyReleased() {
-  saveFrame("export/" + year() + "_" + month() + "_" + day() + "_" + "_Frame_#####");
+  saveFrame("export/" + year() + "_" + month()+ "_" + day() + "_" + hour() + "_"  + minute() + "_" + day() + "_Frame_#####");
 }
 

@@ -1,6 +1,6 @@
 class Walker {
-  int stepSize = 5;
-  float pointSize = 2;
+  int stepSize = 10;
+  float pointSize = 1;
 
   int x;
   int y;
@@ -26,7 +26,7 @@ class Walker {
     pushMatrix();
     translate(x, y);
     rotate(radians(deg));
-    line(0, 0, random(5, 50), random(5, 50));
+    line(0, 0, random(5, 20), random(5, 20));
     popMatrix();
     stroke(255, 125, 125);
     line(this.a, this.b, this.a+20, this.b-20);
