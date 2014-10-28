@@ -1,5 +1,5 @@
-int stepSize = 10;
-float pointSize = 1;
+int stepSize = 5;
+float pointSize = 2;
 
 int x;
 int y;
@@ -10,6 +10,7 @@ float deg = 0;
 
 void setup() {
   size(500, 1000);
+  background(0);
   //colorMode(HSB);
   
   a = round(random(width));
@@ -29,14 +30,10 @@ void draw() {
   rotate(radians(deg));
   line(0, 0,random(5,50),random(5,50));
   popMatrix();
-  //line(a, b, a+20, b-20);
+  stroke(255,125,125);
+  line(a, b, a+20, b-20);
   
-  /*if (deg <= 359) {
-  deg++;
-  } else {
-  deg = 0;
-  }
-  */
+  
   a = updatePoint(a, width);
   b = updatePoint(b, height);
   x = updatePoint(x, width-50);
