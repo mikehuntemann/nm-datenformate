@@ -6,9 +6,15 @@ class Walker {
   int y;
   int a;
   int b;
+
   int sizeTriangle;
-  int baseSize = 15;
+  int baseSize = 10;
+
   float deg = 0;
+
+  int gradeG;
+  int gradeB;
+  int gradeA;
 
   Walker () {
     //Zufällige Startpunkte
@@ -17,13 +23,18 @@ class Walker {
 
     this.x = round(random(width));
     this.y = round(random(height));
+
+    this.gradeG = round((random(125)));
+    this.gradeB = round((random(125)));
+    //this.gradeA = round((random(125)));
   }
 
   void draw () {
     deg = frameCount % 360;
     //stroke(frameCount % 255, 255, 255);
     noStroke();
-    fill(0, random(150, 255), 255);
+    fill(255, gradeG, gradeB);
+    //fill(0, random(150, 255), 255);
     //strokeWeight(random(pointSize / 4, this.pointSize));
     //pushMatrix();
     //translate(x, y);
@@ -42,7 +53,7 @@ class Walker {
   int updateTriangle(int sizeTriangle) {
 
 
-    if (sizeTriangle <= 10) {
+    if (sizeTriangle <= 40) {
       sizeTriangle++;
     } else {
       sizeTriangle = 0;

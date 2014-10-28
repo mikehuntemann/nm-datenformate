@@ -1,6 +1,6 @@
 Walker walker;
 
-int walkersAmount = 1;
+int walkersAmount = 25;
 ArrayList<Walker> walkers = new ArrayList();
 
 
@@ -23,6 +23,6 @@ void draw() {
 }
 
 void keyReleased() {
-  saveFrame("export/" + year() + "_" + month()+ "_" + day() + "_" + hour() + "_"  + minute() + "_" + day() + "_Frame_#####");
+  saveFrame("export/" + year() + "_" + month()+ "_" + day() + "_" + hour() + "_"  + minute() + "_" + day() + "_Frame_#####.jpg");
 }
 
