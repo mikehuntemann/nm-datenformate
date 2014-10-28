@@ -1,5 +1,5 @@
 class Walker2 {
-  int stepSize = 5;
+  int stepSize = 10;
   float pointSize = 2;
 
   int x;
@@ -8,7 +8,7 @@ class Walker2 {
   int b;
 
   int sizeTriangle;
-  int baseSize = 5;
+  int baseSize = 15;
 
   float deg = 0;
 
@@ -40,7 +40,7 @@ class Walker2 {
     //translate(x, y);
     //rotate(radians(deg));
     triangle(this.x-baseSize-sizeTriangle, this.y, this.x, this.y-baseSize*2-sizeTriangle, x+baseSize+sizeTriangle, y);
-    triangle(this.x-baseSize-sizeTriangle, this.y, this.x, this.y+baseSize*2+sizeTriangle, x+baseSize+sizeTriangle, y);
+    //triangle(this.x-baseSize-sizeTriangle, this.y, this.x, this.y+baseSize*2+sizeTriangle, x+baseSize+sizeTriangle, y);
     //popMatrix();
 
 
